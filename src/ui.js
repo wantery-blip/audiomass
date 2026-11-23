@@ -254,7 +254,7 @@
 						}
 					},
 					{
-						name: 'Export / Download',
+						name: '匯出／下載',
 						action: function () {
 								new PKSimpleModal({
 								  title:'Export / Download',
@@ -501,7 +501,7 @@
 					},
 
 			                    {
-						name: 'Load from Computer',
+						name: '從電腦開啟',
 						type: 'file',
 						action: function ( e ) {
 							app.fireEvent ('RequestLoadLocalFile');
@@ -509,7 +509,7 @@
 					},
 					
 					{
-						name: 'Load Sample File',
+						name: '開啟範例檔案',
 						action: function ( e ) {
 							if (app.fireEvent ('RequestLoadSampleFile') !== true)
 								app.engine.LoadSample ('test.mp3');
@@ -517,7 +517,7 @@
 					},
 					
 					{
-						name: 'Load From URL',
+						name: '從網址開啟',
 						action: function ( e ) {
 								new PKSimpleModal({
 								  title:'Load audio from remote url',
@@ -590,14 +590,14 @@
 					},
 
 					{
-						name: 'New Recording',
+						name: '新增錄音',
 						action: function ( e ) {
 							app.fireEvent('RequestActionNewRec');
 						}
 					},
 
 					{
-						name: 'Save Draft Locally',
+						name: '儲存本機草稿',
 						clss: 'pk_inact',
 						action: function ( e ) {
 							if (!app.engine.is_ready) return ;
@@ -766,7 +766,7 @@
 					},
 
 					{
-						name: 'Open Local Drafts',
+						name: '開啟本機草稿',
 						action: function ( e ) {
 
 							var datenow = new Date ();
@@ -1055,10 +1055,10 @@
 				]
 			},
 			{
-				name:'Edit',
+				name:'編輯',
 				children:[
 					{
-						name: 'Undo <span class="pk_shrtct">Shft+Z</span>',
+						name: '復原 <span class="pk_shrtct">Shft+Z</span>',
 						clss: 'pk_inact',
 						action: function () {
 							app.fireEvent ('StateRequestUndo');
@@ -1080,7 +1080,7 @@
 					},
 					
 					{
-						name: 'Redo <span class="pk_shrtct">Shft+Y</span>',
+						name: '取消復原 <span class="pk_shrtct">Shft+Y</span>',
 						clss: 'pk_inact',
 						action: function () {
 							app.fireEvent ('StateRequestRedo');
@@ -1102,28 +1102,28 @@
 					},
 
 					{
-						name: 'Play <span class="pk_shrtct">Space</span>',
+						name: '播放 <span class="pk_shrtct">Space</span>',
 						action: function () {
 							app.fireEvent ('RequestPlay');
 						}
 					},
 					
 					{
-						name: 'Stop',
+						name: '停止',
 						action: function () {
 							app.fireEvent ('RequestStop');
 						}
 					},
 					
 					{
-						name: 'Select All <span class="pk_shrtct">Shft+A</span>',
+						name: '全選 <span class="pk_shrtct">Shft+A</span>',
 						action: function () {
 							app.fireEvent ('RequestSelect');
 						}
 					},
 					
 					{
-						name: 'Deselect All <span class="pk_shrtct">~</span>',
+						name: '取消全選 <span class="pk_shrtct">~</span>',
 						action: function () {
 							app.fireEvent ('RequestDeselect');
 						}
@@ -1146,14 +1146,14 @@
 					},
 
 					{
-						name:'Seamless Loop',
+						name:'無縫循環',
 						action:function () {
 							app.fireEvent ('RequestActionFXUI_SeamlessLoop');
 						}
 					},
 
 					{
-						name: 'Zero Cross Selection',
+						name: '零交叉點選取',
 						action: function () {
 							app.fireEvent ('RequestSnapSelDrag');
 						},
@@ -1167,24 +1167,24 @@
 					]
 				},
 			{
-				name:'Effects',
+				name:'效果',
 				children:[
 					{
-						name:'Gain',
+						name:'增益',
 						action:function () {
 							app.fireEvent ('RequestFXUI_Gain');
 						}
 					},
 
 					{
-						name:'Fade In',
+						name:'淡入',
 						action:function () {
 							app.fireEvent ('RequestActionFX_FadeIn');
 						}
 					},
 
 					{
-						name:'Fade Out',
+						name:'淡出',
 						action:function () {
 							app.fireEvent ('RequestActionFX_FadeOut');
 						}
@@ -1205,7 +1205,7 @@
 					},
 
 					{
-						name:'Compressor',
+						name:'壓縮器',
 						action:function () {
 							app.fireEvent ('RequestActionFXUI_Compressor');
 						}
@@ -1248,7 +1248,7 @@
 					},
 
 					{
-						name:'Distortion',
+						name:'失真',
 						action:function () {
 							app.fireEvent ('RequestActionFXUI_Distortion');
 						}
@@ -1256,14 +1256,14 @@
 
 
 					{
-						name:'Reverb',
+						name:'殘響',
 						action:function () {
 							app.fireEvent ('RequestActionFXUI_Reverb');
 						}
 					},
 
 					{
-						name:'Audio Repair',
+						name:'音訊修復',
 						action:function () {
 							app.fireEvent ('RequestActionFXUI_Repair');
 						}
@@ -1307,10 +1307,10 @@
 				]
 			},
 			{
-				name:'View',
+				name:'檢視',
 				children:[
 					{
-						name:'Follow Cursor  &#10004;',
+						name:'跟隨游標  &#10004;',
 						action: function ( obj ) {
 							app.fireEvent ('RequestViewFollowCursorToggle');
 						},
@@ -1330,7 +1330,7 @@
 					},
 
 					{
-						name:'Peak Separators &#10004;',
+						name:'峰值分隔線 &#10004;',
 						action: function ( obj ) {
 							app.fireEvent ('RequestViewPeakSeparatorToggle');
 						},
@@ -1347,7 +1347,7 @@
 					},
 
 					{
-						name:'Timeline &#10004;',
+						name:'時間軸 &#10004;',
 						action: function ( obj ) {
 							app.fireEvent ('RequestViewTimelineToggle');
 						},
@@ -1368,7 +1368,7 @@
 					},
 
 					{
-						name:'Frequency Analyser',
+						name:'頻率分析器',
 						action: function ( obj ) {
 							app.fireEvent ('RequestShowFreqAn', 'eq', [1]);
 						},
@@ -1387,7 +1387,7 @@
 					},
 
 					{
-						name:'Spectrum Analyser',
+						name:'頻譜分析器',
 						action: function ( obj ) {
 							app.fireEvent ('RequestShowFreqAn', 'sp', [1]);
 						},
@@ -1406,7 +1406,7 @@
 					},
 
 					{
-						name:'Multitrack Mixer',
+						name:'多軌混音器',
 						action: function ( obj ) {
 							var mt = app.multitrack;
 							if (mt && mt.IsOn && !mt.IsOn ()) mt.Toggle ( true );
@@ -1427,14 +1427,14 @@
 					},
 
 					{
-						name:'Tempo Tools',
+						name:'節奏工具',
 						action: function ( obj ) {
 							app.fireEvent ('RequestActionTempo');
 						}
 					},
 
 					{
-						name:'ID3 Tags',
+						name:'ID3 標籤',
 						action: function ( obj ) {
 							app.fireEvent ('RequestActionID3');
 						}
@@ -1445,14 +1445,14 @@
 					},
 
 					{
-						name:'Center to Cursor <span class="pk_shrtct">[Tab]</span>',
+						name:'置中至游標 <span class="pk_shrtct">[Tab]</span>',
 						action: function ( obj ) {
 							app.fireEvent ('RequestViewCenterToCursor');
 						}
 					},
 
 					{
-						name:'Reset Zoom <span class="pk_shrtct">[0]</span>',
+						name:'重設縮放 <span class="pk_shrtct">[0]</span>',
 						action: function ( obj ) {
 							app.fireEvent ('RequestZoomUI', 0);
 						}
@@ -1461,7 +1461,7 @@
 				]
 			},
 			{
-				name:'Help',
+				name:'說明',
 				children:[
 					{
 						name   : 'Store Offline Version',
