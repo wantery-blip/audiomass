@@ -1,6 +1,6 @@
 {
-  "name": "Audiomass - Audio Editor",
-  "short_name": "Audiomass - Audio Editor",
+  "name": "聲音剪輯",
+  "short_name": "聲音剪輯",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",

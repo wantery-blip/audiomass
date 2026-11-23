@@ -244,8 +244,15 @@
 	function _topbarConfig ( app, ui ) {
 		return [
 			{
-				name:'File',
+				name:'檔案',
 				children : [
+					{
+						name: '進階轉檔（ffmpeg.wasm）',
+						action: function () {
+							if (w.SoundEditorFFmpeg) w.SoundEditorFFmpeg.open (app);
+							else app.fireEvent ('ShowError', '進階轉檔工具尚未載入。');
+						}
+					},
 					{
 						name: 'Export / Download',
 						action: function () {

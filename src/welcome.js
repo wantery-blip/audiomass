@@ -39,7 +39,7 @@ setTimeout(function () {
 
 			// Welcome to AudioMass,
 			var md = new PKSimpleModal({
-				title: '<font style="font-size:15px">Welcome to AudioMass</font>',
+				title: '<font style="font-size:15px">歡迎使用聲音剪輯</font>',
 				ondestroy: function( q ) {
 					PKAE.ui.InteractionHandler.on = false;
 					PKAE.ui.KeyHandler.removeCallback ('modalTemp');
@@ -47,7 +47,7 @@ setTimeout(function () {
 			},
 			body:'<div style="overflow:auto;-webkit-overflow-scrolling:touch;max-width:580px;width:calc(100vw - 40px);max-height:calc(100vh - 340px);min-height:110px;font-size:13px; color:#95c6c6;padding-top:7px;">'+
 				mobile_note+
-				'AudioMass is a free, open source, web-based Audio and Waveform Editor.<br />It runs entirely in the browser with no backend and no plugins required!'+
+				'聲音剪輯是免費、開源的網頁音訊與波形編輯器。<br />它完全在瀏覽器中運作，無需後端或外掛！'+
 				'<br/><br/>'+
 				body_str+
 				'You can load any type of audio your browser supports and perform operations such as fade in, cut, trim, change the volume, '+
